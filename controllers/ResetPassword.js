@@ -36,7 +36,7 @@ exports.resetPasswordToken = async (req, res) => {
     );
     console.log(updatedDetails);
     // create the url for frent-end
-    const url = `http://localhost:3000/update-password/${token}`;
+    const url = `https://studyaddal.netlify.app/update-password/${token}`;
 
     //send main containg the url
     await mailSender(
@@ -113,7 +113,7 @@ exports.resetPassword = async (req, res) => {
     console.log("upadetd user is", use);
 
     // create the url for frent-end
-    const url = `http://localhost:3000/login`;
+    const url = `https://studyaddal.netlify.app/login`;
     // console.log("user upfate=>>>>", use.email);
     await mailSender(
       `${use.email}`,
